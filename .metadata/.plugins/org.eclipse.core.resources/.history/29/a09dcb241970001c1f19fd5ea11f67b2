@@ -1,0 +1,86 @@
+
+public class exercicio6 {
+
+	public static void main(String[] args) {
+
+        Scanner tec = new Scanner(System.in);
+
+        float mediaIM=0;
+
+        int contM=0;
+
+        int contF=0;
+
+        int somaIF=0;
+
+        int numero = 1;
+
+        int idade;
+
+
+
+        do{
+
+            System.out.print("Digite o número do cliente: ");
+
+            numero = tec.nextInt();
+
+            if(numero == 999){
+
+                System.exit(0);
+
+            }
+
+            System.out.print("Digite o sexo: [F/M] ");
+
+            String sexo = tec.next();
+
+            System.out.println("Digite a idade: ");
+
+            idade = tec.nextInt();
+
+
+
+            if("M".equals(sexo)){
+
+                contM+=1;
+
+                mediaIM=(mediaIM+idade)/contM;
+
+
+
+            }else if("F".equals(sexo)){
+
+                contF+=1;
+
+                somaIF+=idade;
+
+            }
+
+            if(contM>contF){
+
+                System.out.println("Mais homens na lista.");
+
+            }else{
+
+                System.out.println("Mais mulheres na lista.");
+
+            }
+
+            System.out.println("Cliente Número " + numero + ". Sexo: " + sexo + ". Idade: " + idade);
+
+            System.out.println("Total de homens: " + contM);
+
+            System.out.println("Média da Idade dos homens: " + mediaIM);
+
+            System.out.println("Quantidade de mulheres: " + contF);
+
+            System.out.println("Soma das mulheres: " + somaIF);
+
+        }
+
+        while(numero!=999);
+
+    }
+	
+}
