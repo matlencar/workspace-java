@@ -1,0 +1,19 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class ExercicioIfElse6 {
+
+	public static void main(String[] args) {
+		
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		double numero = sc.nextDouble();
+		
+		if(numero < 25.00 || 100.00 > numero) {
+			System.out.println("Fora de intervalo ");
+		}
+	}
+
+}
